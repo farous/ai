@@ -1,21 +1,13 @@
 package com.sivalabs.aidemo.ragdb;
 
-//import fr.irsn.siseri.service.util.date.TimestampConverter;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-//import org.apache.commons.lang3.StringUtils;
-//import org.hibernate.annotations.Cascade;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-//import java.time.ZonedDateTime;
-//import java.util.HashSet;
-//import java.util.Set;
 import java.util.UUID;
 
 @Entity
