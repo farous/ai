@@ -10,14 +10,12 @@ import java.util.List;
 @Service
 public class DatabaseService {
     private final AccedantRepository accedantRepository;
-//    private final OrderRepository orderRepository;
 
     public DatabaseService(AccedantRepository accedantRepository/*, OrderRepository orderRepository*/) {
         this.accedantRepository = accedantRepository;
-//        this.orderRepository = orderRepository;
     }
 
-    public String retrieveRelevantData(String question) {
+    public String retrieveRelevantData() {
         StringBuilder relevantData = new StringBuilder();
 
         List<Accedant> accedants = accedantRepository.findAll();

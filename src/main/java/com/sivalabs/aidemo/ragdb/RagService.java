@@ -28,15 +28,14 @@ public class RagService {
     }
 
     public String answerQuestion(String question) {
-        String relevantData = databaseService.retrieveRelevantData(question);
+        String relevantData = databaseService.retrieveRelevantData();
 
         String prompt = "Based on the following data:\n\n" + relevantData +
                 "\n\nPlease answer the following question: " + question;
 
         var chatModel = new OllamaChatModel(ollamaApi,
                 OllamaOptions.create()
-                        .withModel("llama3")
-                        .withTemperature(0f));
+                        .withModel("llama3"));
 
         ChatResponse response = chatModel.call(
                 new Prompt(prompt));

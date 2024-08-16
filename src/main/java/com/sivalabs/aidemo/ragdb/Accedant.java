@@ -64,69 +64,11 @@ public class Accedant {
     @Column(name = "cgu_validee")
     private Boolean cguValidee = false;
 
-//    @Convert(converter = TimestampConverter.class)
-//    @Column(name = "date_derniere_connexion")
-//    private ZonedDateTime dateDerniereConnexion;
-
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "id_etablissement")
-//    private Etablissement etablissement;
-//
-//    @OneToMany(mappedBy = "accedant", orphanRemoval = true)
-//    @Cascade({org.hibernate.annotations.CascadeType.ALL})
-//    private Set<EtablissementAccedantRole> etablissementAccedantRoles = new HashSet<>();
-//
-//    @OneToMany(mappedBy = "accedant", orphanRemoval = true)
-//    @Cascade({org.hibernate.annotations.CascadeType.ALL})
-//    private Set<EmetteurAccedant> emetteurAccedants = new HashSet<>();
-//
-//    @ManyToMany
-//    @JoinTable(name = "asso_accd_groupe",
-//            joinColumns = @JoinColumn(name = "id_accedant"),
-//            inverseJoinColumns = @JoinColumn(name = "id_groupe_travailleur"))
-//    @Cascade({org.hibernate.annotations.CascadeType.ALL})
-//    private Set<GroupeTravailleur> groupes = new HashSet<>();
-
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "id_statut",
-//            referencedColumnName = "id",
-//            foreignKey = @ForeignKey(name = "fk_accedant_statut")
-//    )
-//    private Statut statut;
-
     @Column(name = "nb_connexions")
     @NotNull
     private Integer nbConnexions = 0;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "id_type_accedant",
-//            foreignKey = @ForeignKey(name = "accedant_type_accedant_fk")
-//    )
-//    private TypeAccedant typeAccedant;
-
     @Column(name = "role_courant")
     private String roleCourant;
-
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "id_corps_inspection",
-//            foreignKey = @ForeignKey(name = "accedant_corps_inspection_fk")
-//    )
-//    private CorpsInspection corpsInspection;
-//
-//    @PreUpdate
-//    public void preUpdate() {
-//        if (id != null && StringUtils.isBlank(email) && uuIdKeycloak != null) {
-//            Logger log = LoggerFactory.getLogger(this.getClass());
-//            log.warn("Accedant.preUpdate() email vide pour l'utilisateur {}", id);
-//            for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-//                if (ste.getClassName().contains("fr.irsn.siseri") && !ste.getClassName().contains("$$")) {
-//                    log.warn("{}", ste);
-//                }
-//            }
-//        }
-//    }
 
 }
